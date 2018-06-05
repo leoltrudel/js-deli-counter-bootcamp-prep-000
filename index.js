@@ -1,7 +1,10 @@
-function takeANumber(line, customer) {
-  line.push(customer)
-  var positionInLine = line.length
-  return `Welcome, ${customer}. You are number ${positionInLine} in line.`
+var positionInLine = 0
+
+function takeANumber(line) {
+
+  positionInLine++
+  line.push(positionInLine)
+  return `Welcome, you are number ${positionInLine}.`
 }
 
 function nowServing(line) {
@@ -23,4 +26,7 @@ function currentLine(line) {
     return customersInLine.substring(0, customersInLine.length - 2)
   }
 }
+
+
+
 
